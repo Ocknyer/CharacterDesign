@@ -59,6 +59,38 @@
     }
 }
 
+@keyframes drop {
+  0% {
+      transform: translateY(-1000%);
+  }
+
+  90% {
+      transform: translateY(455%);
+  }
+
+  95% {
+      transform: translateY(440%);
+  }
+
+  97% {
+      transform: translateY(445%);
+  }
+
+  100% {
+      transform: translateY(440%);
+  }
+}
+
+@keyframes btn-away {
+  from {
+      transform: translateY(0);
+  }
+
+  to {
+      transform: translateY(2500px);
+  }
+}
+
 body {
     background: #333;
     height: 100vh;
@@ -113,49 +145,188 @@ body {
   .btn-go.fade-away {
     animation: btn-away 4s forwards;
   }
-
-  @keyframes btn-away {
-    from {
-        transform: translateY(0);
-    }
-
-    to {
-        transform: translateY(2500px);
-    }
+  
+  div {
+    box-sizing: border-box;
   }
 
   .vec-tiger {
     /* display: none; */
-    position: absolute;
+    position: relative;
     top: -50%;
     width: 300px;
-  }
-
-  @keyframes drop {
-    0% {
-        transform: translateY(-1000%);
-    }
-
-    90% {
-        transform: translateY(455%);
-    }
-
-    95% {
-        transform: translateY(440%);
-    }
-
-    97% {
-        transform: translateY(445%);
-    }
-
-    100% {
-        transform: translateY(440%);
-    }
+    height: 306px;
+    /* 그림 시작 */
+    background-color: wheat;
   }
 
   .vec-tiger.popup {
     display: block;
     animation: drop 2s ease-in forwards;
+  }
+
+  .face {
+    position: absolute;
+    width: 300px;
+    height: 257px;
+    border: 10px solid black;
+    border-radius: 60px 60px 75px 75px;
+    bottom: 0;
+    background-color: #FF981D;
+  }
+
+  .ear {
+    width: 60px;
+    height: 80px;
+    border: 10px solid black;
+    border-radius: 26px;
+    background-color: #FF981D;
+  }
+
+  .ear.left {
+    position: absolute;
+    left: 43px;
+  }
+
+  .ear.right {
+    position: absolute;
+    right: 43px;
+  }
+
+  .earline  {
+    position: absolute;
+    border: 10px solid black;
+    height: 45px;
+    top: 12px;
+    left: 10px;
+    border-radius: 30px;
+  }
+
+  .eye {
+    position: absolute;
+    width: 50px;
+    height: 66px;
+    border-radius: 25px;
+    background-color: #000;
+  }
+
+  .eye.left {
+    left: 63px;
+    top: 50px;
+  }
+
+  .eye.right {
+    right: 63px;
+    top: 50px;
+  }
+
+  .pupil {
+    position: absolute;
+    width: 50px;
+    height: 66px;
+    background: url(./SVG/pupil.svg) center no-repeat;
+  }
+
+  .nose {
+    position: absolute;
+    top: 110px;
+    left: 120px;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px 12px 17px 17px;
+    background-color: #000;
+  }
+
+  .mouth-top {
+    position: absolute;
+    width: 61px;
+    height: 61px;
+    border: 10px solid black;
+    border-radius: 50%;
+    background-color: white;
+    z-index: 3;
+  }
+
+  .mouth-top.right {
+    top: 130px;
+    left: 84px;
+  }
+
+  .mouth-top.left {
+    top: 130px;
+    right: 84px;
+  }
+
+  .mouth-bottom {
+    position: absolute;
+    top: 160px;
+    left: 117px;
+    width: 46px;
+    height: 45px;
+    border: 10px solid black;
+    border-radius: 50%;
+    background-color: #FC9D9D;
+  }
+
+  .tooth {
+    position: absolute;
+    top: 170px;
+    width: 28px;
+    height: 61px;
+    border: 10px solid black;
+    border-radius: 50%;
+    background-color: #fff;
+    z-index: 1;
+  }
+
+  .tooth.left {
+    left: 99px;
+  }
+
+  .tooth.right {
+    right: 99px;
+  }
+
+  /* .pattern */
+  .top-line {
+    position: absolute;
+    top: -10px;
+    left: 100px;
+    width: 20px;
+    height: 45px;
+    border: 10px solid black;
+    border-radius: 30px;
+  }
+  
+  .top-line:nth-child(2) {
+    left: 130px;
+  }
+
+  .top-line:nth-child(3) {
+    left: 160px;
+  }
+
+  .side-line {
+    position: absolute;
+    top: 110px;
+    left: -10px;
+    width: 61px;
+    height: 20px;
+    border: 10px solid black;
+    border-radius: 30px;
+  }
+
+  .side-line:nth-child(2) {
+    top: 137px;
+  }
+
+  .side-line:nth-child(3) {
+    top: 164px;
+  }
+
+  .pattern-right {
+    position: absolute;
+    right: 41px;
   }
   
   /* Pixel Art */
