@@ -67,6 +67,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
   }
 
   .container {
@@ -77,13 +78,11 @@ body {
     width: 320px;
     height: 320px;
     animation: bow 4.5s infinite;
-    transition: all 0.5s;
     transform-origin: bottom;
   }
 
   .canvas.fade-away {
-    animation: fadeout 1s ease-in forwards;
-    transition: .3s;
+    animation: fadeout 1.2s ease-in forwards;
     transform-origin: center;
   }
   
@@ -112,8 +111,7 @@ body {
   }
 
   .btn-go.fade-away {
-    animation: btn-away 1.5s ease-in forwards;
-    transition: all .3s;
+    animation: btn-away 4s forwards;
   }
 
   @keyframes btn-away {
