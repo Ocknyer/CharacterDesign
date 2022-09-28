@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS 캐릭터 디자인</title>
+    <title>PIXEL TIGER</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="container">
+        <h1 class="welcome">PIXEL TIGER</h1>
         <div class="canvas">
             <div class="pixel"></div>
             <div class="pixel"></div>
@@ -74,7 +77,7 @@
             <div class="pixel"></div>
             <div class="pixel"></div>
             <div class="pixel"></div>
-            
+
             <div class="pixel"></div>
             <div class="pixel"></div>
             <div class="pixel"></div>
@@ -139,7 +142,7 @@
             <div class="pixel"></div>
             <div class="pixel"></div>
             <div class="pixel"></div>
-            
+
             <div class="pixel"></div>
             <div class="pixel"></div>
             <div class="pixel"></div>
@@ -204,7 +207,7 @@
             <div class="pixel"></div>
             <div class="pixel"></div>
             <div class="pixel"></div>
-    
+
             <div class="pixel"></div>
             <div class="pixel"></div>
             <div class="pixel"></div>
@@ -269,59 +272,65 @@
             <div class="pixel"></div>
             <div class="pixel"></div>
             <div class="pixel"></div>
-          </div>
-          <button class="btn-go">Click To See Cuter Tiger!</button>
-          <div class="vec-tiger">
-            <!-- <img src="./SVG/vectorTiger.svg" alt=""> -->
-            <div class="ear left">
-                <div class="earline"></div>
+        </div>
+        <button class="btn-go">Click To See Scary Tiger!</button>
+    </div>
+    <div class="vec-tiger">
+        <div class="ear left">
+            <div class="earline"></div>
+        </div>
+        <div class="ear right">
+            <div class="earline"></div>
+        </div>
+        <div class="face">
+            <div class="eye left">
+                <div class="pupil"></div>
             </div>
-            <div class="ear right">
-                <div class="earline"></div>
+            <div class="eye right">
+                <div class="pupil"></div>
             </div>
-            <div class="face">
-                <div class="eye left">
-                    <div class="pupil"></div>
-                </div>
-                <div class="eye right">
-                    <div class="pupil"></div>
-                </div>
-                <div class="nose"></div>
-                <div class="mouth-top right"></div>
-                <div class="mouth-top left"></div>
-                <div class="mouth-bottom"></div>
-                <div class="tooth left"></div>
-                <div class="tooth right"></div>
-                <div class="pattern-left">
-                    <div class="side-line"></div>
-                    <div class="side-line"></div>
-                    <div class="side-line"></div>
-                </div>
-                <div class="pattern-right">
-                    <div class="side-line"></div>
-                    <div class="side-line"></div>
-                    <div class="side-line"></div>
-                </div>
-                <div class="pattern-top">
-                    <div class="top-line"></div>
-                    <div class="top-line"></div>
-                    <div class="top-line"></div>
-                </div>
+            <div class="nose"></div>
+            <div class="mouth-top right"></div>
+            <div class="mouth-top left"></div>
+            <div class="mouth-bottom"></div>
+            <div class="tooth left"></div>
+            <div class="tooth right"></div>
+            <div class="pattern-left">
+                <div class="side-line"></div>
+                <div class="side-line"></div>
+                <div class="side-line"></div>
+            </div>
+            <div class="pattern-right">
+                <div class="side-line"></div>
+                <div class="side-line"></div>
+                <div class="side-line"></div>
+            </div>
+            <div class="pattern-top">
+                <div class="top-line"></div>
+                <div class="top-line"></div>
+                <div class="top-line"></div>
             </div>
         </div>
     </div>
-
     <script>
         const revolution = document.querySelector('.canvas');
         const vectorTiger = document.querySelector('.vec-tiger');
         const btnGo = document.querySelector('.btn-go')
+        const heading = document.querySelector('.welcome')
 
         btnGo.addEventListener('click', (e) => {
             e.preventDefault;
             revolution.classList.add('fade-away');
             btnGo.classList.add('fade-away');
-            vectorTiger.classList.add('popup');
+            heading.classList.add('fade-away');
+            setTimeout(function () {
+                vectorTiger.classList.add('drop');
+                setTimeout(function () {
+                    vectorTiger.classList.add('pop');
+                }, 1000)
+            }, 1000);
         })
     </script>
 </body>
+
 </html>
